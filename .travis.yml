@@ -1,7 +1,8 @@
 language: node_js
 node_js: 
+	- "node"
 	- "8.6.0"
 before_install: 
 	- npm install -g karma-cli
-install: npm install
+before_script:: npm install
 script: npm test
