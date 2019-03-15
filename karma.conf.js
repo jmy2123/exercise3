@@ -15,9 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**.js',
+      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js',
       'node_modules/should/should.js',
-      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js'
+      'test/**.js'
     ],
 
 
@@ -57,7 +57,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'ChromeCanary'],
+    browsers: ['Chrome'],
 
     // you can define custom flags
     customLaunchers: {
@@ -70,15 +70,15 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  }  
+  }
 
-  if(process.env.TRAVIS){
-    configuration.browsers = ['Chrome_travis_ci'];
+  if (process.env.TRAVIS) {
+      cfg.browsers = ['Chrome_travis_ci']
   }
 
   config.set(configuration);
