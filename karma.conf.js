@@ -64,10 +64,6 @@ module.exports = function(config) {
       Chrome_without_security: {
         base: 'Chrome',
         flags: ['--disable-web-security']
-      },
-      Chrome_with_debugging: {
-        base: 'Chrome',
-        chromeDataDir: path.resolve(__dirname, '.chrome')
       }
     },
 
