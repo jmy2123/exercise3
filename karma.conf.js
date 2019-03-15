@@ -69,7 +69,7 @@ module.exports = function(config) {
         base: 'Chrome',
         chromeDataDir: path.resolve(__dirname, '.chrome')
       }
-    }
+    },
 
 
     // Continuous Integration mode
