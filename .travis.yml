@@ -6,4 +6,4 @@ before_install:
   - npm install -g karma-cli
   - npm i -D karma-chrome-launcher
 install: npm install
-script: npm test --browsers Chrome,Chrome_without_security
+script: npm test
